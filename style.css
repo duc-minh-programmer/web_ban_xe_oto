@@ -1,0 +1,162 @@
+/* code chung cho ca bai */
+:root {
+    --cl_bgr :  rgb(214, 214, 214);
+    --cl_main: rgb(6, 16, 114);
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    font-size: 1.6rem;
+    background-color: rgb(226, 218, 218);
+    color: var(--cl_main);
+    display: flex;
+    justify-content: center;
+}
+.main-content {
+    width: 1280px;
+}
+/* =============head */
+header {
+    color: var(--cl_main);
+    background-color: var(--cl_bgr);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* head left */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: 3rem;
+}
+.logo-name-2 {
+    color: red;
+}
+/* head right */
+.header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--cl_main);
+    margin-right: 3rem;
+}
+/* =============main */
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* nav */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 2rem;
+}
+.nav h4:hover {
+    cursor: pointer;
+    color: red;
+    text-shadow: 0.3px 0.3px red ;
+}
+.nav__advise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.nav__advise:hover {
+    cursor: pointer;
+    color: red;
+}
+.nav__advise--menu {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 200px;
+    filter: opacity(0.8);
+    margin-top: 230px;
+    margin-left: 230px;
+    box-shadow: 1px 1px 20px 1px black;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.2s;
+    visibility: hidden;
+}
+.nav__advise--menu h4 {
+    margin-top: 6px;
+    margin-left: 15px;
+}
+.nav__advise:hover ~ .nav__advise--menu, .nav__advise--menu:hover{
+    visibility: visible;
+    opacity: 1;
+}
+.nav__advise--menu h4:hover {
+    text-shadow: 1px 1px var(--cl_main);
+}
+/* finding */
+.finding {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-right: 2rem;
+}
+
+/* new car */
+.new-car {
+    background-color: var(--cl_bgr);
+    height: 40rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.new-car__content {
+    margin-left: 20rem;
+}
+
+/* list car */
+.list-car {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+}
+.list-car__top, .list-car__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+.list-car__top--item:hover, .list-car__bottom--item:hover {
+    cursor: pointer;
+    height: 99px;
+}
+
+/* service */
+.service {
+    margin-top: 200px;
+    background-color: var(--cl_bgr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1080px;
+}
+.service-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
